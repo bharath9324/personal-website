@@ -1,5 +1,8 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     kotlin("jvm") version "2.1.10"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
     application
 }
 
@@ -36,3 +39,10 @@ kotlin {
     jvmToolchain(23)
 }
 
+tasks.withType<ShadowJar> {
+    archiveClassifier.set("") // so it replaces the default jar
+    mergeServiceFiles()
+    manifest {
+        attributes["Main-Class"] = "com.example.MainKt"
+    }
+}
