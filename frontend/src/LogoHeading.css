@@ -1,0 +1,9 @@
+.company {
+  margin-bottom: 3px;
+}
+
+.company img {
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: -5px;
+}

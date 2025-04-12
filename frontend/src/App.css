@@ -1,7 +1,11 @@
 #root {
+  padding: 0rem;
+  text-align: center;
+}
+
+#main-body {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0rem;
   text-align: center;
 }
 
@@ -20,6 +24,31 @@
   }
 }
 
+.footer {
+  background-size: 'cover';
+  background-position: 'center';
+  background-color: #223365;
+}
+
+.footer a {
+  color: rgb(222, 222, 116);
+}
+
+.footer a:hover {
+  color: rgb(116, 222, 222);
+}
+
+.footer h2 {
+  font-size: 30px;
+  padding-top: 11px;
+  margin-bottom: 10px;
+}
+
+.bordered-letter {
+  -webkit-text-stroke: 0.1px black;
+  color: white;
+}
+
 .card {
   padding: 2em;
 }
@@ -30,10 +59,6 @@
 
 .dates-light {
   color: #999999;
-}
-
-.company {
-  margin-bottom: 3px;
 }
 
 .footer {
