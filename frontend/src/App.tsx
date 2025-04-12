@@ -1,4 +1,6 @@
 import './App.css'
+import React, { useEffect, useState } from 'react';
+import LoadingScreen from './LoadingScreen';
 import profileImg from './assets/bharath-real.jpg';
 import ghibliImg from './assets/bharath-ghibli.jpg';
 import faireLogo from './assets/faire_logo.jpg';
@@ -11,7 +13,20 @@ import ImageChangegBox from './ImageChangeBox';
 import LogoHeading from './LogoHeading';
 
 const App: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading delay (e.g., fetching assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
+    <>
+    {loading ? (<LoadingScreen />) :(
     <main className="flex flex-col items-center justify-center bg-gray-100 text-gray-900 px-4">
       <div id="main-body">
         <div className="max-w-xl text-center">
@@ -117,6 +132,8 @@ const App: React.FC = () => {
         </div>
       </div>
     </main>
+    )}
+    </>
   );
 };
 
