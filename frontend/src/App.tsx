@@ -37,11 +37,8 @@ const App: React.FC = () => {
           <h1 className="text-4xl font-bold mb-2">Hi, I'm Bharath</h1>
           <h2 className="text-xl text-gray-600 mb-6">Software Engineer</h2>
           <p className="mb-6">
-          Experienced software engineer at startups, hyper-growth scaleups and large enterprise companies.
-          I have done my Master's in Computer Science at the University of Waterloo (2018) and Bachelor's in Computer Science at IIT Indore.
-          I am currently working on making Faire's search service more reliable and scalable.
-          I have designed and launched various projects to improve Faire's search infrastructure and features,
-          enhancing Faire's product and driving provable business impact through A/B testing.
+            I am an experienced software engineer who has worked at startups, hyper-growth scaleups, and large enterprise companies.
+            I earned my Master's in Computer Science at the University of Waterloo (2018) and my Bachelor's in Computer Science at IIT Indore.
           </p>
           <h2 className="text-xl text-gray-600 mb-6">Experience</h2>
           <LogoHeading logoSrc={faireLogo}> Faire - Software Engineer </LogoHeading>
@@ -88,8 +85,11 @@ const App: React.FC = () => {
           <div className="p-4 bg-gray-100 max-w-sm overflow-hidden transition-all duration-300">
             <p className="truncate hover:whitespace-normal">
               <ul>
-                <li>Published and presented the paper (Quality-based classification of images for illumination invariant face recognition)
-                  based on my work at the 2016 ISBA IEEE Conference in Sendai, Japan. </li>
+                <li>Published the paper <a href="https://ieeexplore.ieee.org/document/7477245">(Quality-based classification of images for illumination invariant face recognition) </a>
+                   based on my work at the 2016 ISBA IEEE Conference. </li>
+                <li>Presented my research at the 2016 ISBA IEE Conference in Sendai, Japan. </li>
+                <li>Collaborated with researchers and scientists to design and execute experiments. </li>
+                  
               </ul>
             </p>
           </div>
@@ -102,10 +102,38 @@ const App: React.FC = () => {
               </ul>
             </p>
           </div>
+          <h2 className="text-xl text-gray-600 mb-6">Projects</h2>
+          <h3>Interactive Augmented Reality Marker</h3>
+          <div className="p-4 bg-gray-100 max-w-sm overflow-hidden transition-all duration-300"> 
+            <p>
+              Developed a augmented reality application that detects visual markers and projects a 3D cube over them in real time.
+              Utilized OpenCV for marker detection and computer vision processing.
+              Focused on accurate tracking, efficient rendering, and a lightweight implementation suitable for educational demos and prototyping.
+            </p>
+            <div style={{ maxWidth: '800px', margin: '40px auto' }}>
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                <iframe
+                  src="https://www.youtube.com/embed/9O5fp1Evy64?rel=0"
+                  title="Interactive Augmented Reality Marker"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                  }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
           <h2 className="text-xl text-gray-600 mb-6">Education</h2>
           <LogoHeading logoSrc={waterlooLogo}>University of Waterloo</LogoHeading>
           <div className="dates-light"> 2016 September - 2018 August </div>
           <div className="p-4 bg-gray-100 max-w-sm overflow-hidden transition-all duration-300"> M.Math - Computer Science </div>
+          <div className="p-4 bg-gray-100 max-w-sm overflow-hidden transition-all duration-300"> Relevant Courses: CS 898 Deep Learning, CS 889 Human Computer Interaction, CS 698 Machine Learning </div>
           <LogoHeading logoSrc={iitIndoreLogo}>Indian Institute of Technology (IIT), Indore</LogoHeading>
           <div className="dates-light"> 2012 July - 2016 May </div>
           <div className="p-4 bg-gray-100 max-w-sm overflow-hidden transition-all duration-300"> B.Tech - Computer Science and Engineering </div>

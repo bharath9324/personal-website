@@ -14,14 +14,13 @@
 }
 
 a {
-  font-weight: 1000;
   font-size: 16px;
-  color: #2034a5;
+  color: #13259c;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #3388d5;
+  color: #518dc6;
 }
 
 body {

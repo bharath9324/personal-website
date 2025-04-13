@@ -3,7 +3,6 @@
     padding: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
-    cursor: pointer;
     text-align: center;
   }
   
@@ -12,7 +11,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto 12px auto; /* auto margins horizontally */
-    width: 100%;
+    width: 120px;
     height: 120px;
     position: relative;
     padding-top: 35px;
