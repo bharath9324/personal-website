@@ -9,7 +9,7 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val jettyVersion = "12.0.12"
+val jettyVersion = "11.0.25"
 val jerseyVersion = "3.1.10"
 
 repositories {
@@ -18,12 +18,13 @@ repositories {
 
 dependencies {
     implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
-    implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
+    implementation("org.eclipse.jetty:jetty-servlet:${jettyVersion}")
+    implementation("org.eclipse.jetty:jetty-servlets:${jettyVersion}")
+
+    implementation("org.glassfish.jersey.containers:jersey-container-servlet:${jerseyVersion}")
     implementation("org.glassfish.jersey.inject:jersey-hk2:${jerseyVersion}")
-    implementation("org.glassfish.jersey.containers:jersey-container-jdk-http:${jerseyVersion}")
-    implementation("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
-    implementation("org.glassfish.jaxb:jaxb-runtime:4.0.5")
-    implementation("org.glassfish.jersey.media:jersey-media-json-jackson:3.1.10")
+    implementation("org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyVersion}")
+
     testImplementation(kotlin("test"))
 }
 
