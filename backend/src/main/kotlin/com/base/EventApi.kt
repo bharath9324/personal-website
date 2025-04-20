@@ -2,6 +2,7 @@ package com.base
 
 import jakarta.inject.Singleton
 import jakarta.servlet.http.HttpServletRequest
+import jakarta.ws.rs.Consumes
 import jakarta.ws.rs.PUT
 import jakarta.ws.rs.Path
 import jakarta.ws.rs.Produces
@@ -23,6 +24,7 @@ class EventApi {
             // Fallback to remote address
             request.remoteAddr
         }
+        println(request.reader.use { it.readText() })
         return Response.ok().build()
     }
 

@@ -17,6 +17,9 @@ repositories {
 }
 
 dependencies {
+    implementation("org.hibernate.orm:hibernate-core:6.6.13.Final")
+    implementation("jakarta.persistence:jakarta.persistence-api:3.2.0")
+
     implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
     implementation("org.eclipse.jetty:jetty-servlet:${jettyVersion}")
     implementation("org.eclipse.jetty:jetty-servlets:${jettyVersion}")
