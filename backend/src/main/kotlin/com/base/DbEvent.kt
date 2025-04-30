@@ -2,7 +2,6 @@ package com.base
 
 import jakarta.inject.Singleton
 import jakarta.persistence.*
-import org.hibernate.Session
 import java.sql.Timestamp
 
 @Entity
@@ -16,18 +15,18 @@ class DbEvent {
     private lateinit var ipAddress: String
 
     @Column
-    private lateinit var type: EventType
+    private lateinit var eventType: EventType
 
     @Column
     private lateinit var timestamp: Timestamp
 
     @Singleton
     class Factory {
-        fun create(ipAddress: String, type: EventType, timestamp: Timestamp) {
+        fun create(ipAddress: String, eventType: EventType, timestamp: Timestamp) {
             val session = HibernateUtil.sessionFactory.openSession()
             val event = DbEvent()
             event.ipAddress = ipAddress
-            event.type = type
+            event.eventType = eventType
             event.timestamp = timestamp
             session.use {
                 val tx = session.beginTransaction()
@@ -38,8 +37,4 @@ class DbEvent {
         }
     }
 
-}
-
-enum class EventType {
-    VISIT, PROFILE_IMAGE_HOVER, LINKEDIN_HOVER
 }

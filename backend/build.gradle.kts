@@ -19,6 +19,9 @@ repositories {
 dependencies {
     implementation("org.hibernate.orm:hibernate-core:6.6.13.Final")
     implementation("jakarta.persistence:jakarta.persistence-api:3.2.0")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.18.3")
+    implementation("com.mysql:mysql-connector-j:9.2.0")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 
     implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
     implementation("org.eclipse.jetty:jetty-servlet:${jettyVersion}")
