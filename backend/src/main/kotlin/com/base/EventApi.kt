@@ -32,7 +32,7 @@ class EventApi {
         val eventRequest = request.toEventRequest()
         val timestamp = Timestamp.from(Instant.now())
         dbEventFactory.create(ipAddress = clientIp, eventType = eventRequest.eventType, timestamp = timestamp)
-        return Response.ok().build()
+        return Response.ok("Event recorded").build()
     }
 }
 

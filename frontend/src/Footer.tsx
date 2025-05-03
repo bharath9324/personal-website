@@ -1,5 +1,6 @@
 import './Footer.css'
 import { useEffect, useState } from "react";
+import { EventType, submitEventData } from './apis/eventApi';
 
 export default function Footer() {
     const [isPulsing, setIsPulsing] = useState(false);
@@ -26,6 +27,22 @@ export default function Footer() {
         };
     }, []);
 
+    const handleLinkedInHover = () => {
+        submitEventData(EventType.HOVER_LINKEDIN_LINK);
+    };
+
+    const handleEmailHover = () => {
+        submitEventData(EventType.HOVER_GMAIL_LINK);
+    };
+
+    const handleLinkedInClick = () => {
+        submitEventData(EventType.CLICK_LINKEDIN_LINK);
+    };
+
+    const handleEmailClick = () => {
+        submitEventData(EventType.CLICK_GMAIL_LINK);
+    };
+
     return (
         <footer className={`footer transition-transform ${isPulsing ? "animate-pulse-scale" : ""}`}>
             <h2 className="text-xl text-gray-600 mb-6 bordered-letter">Let's connect!</h2>
@@ -36,12 +53,16 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline bordered-letter"
                 style={{ paddingRight: '30px' }}
+                onMouseEnter={handleLinkedInHover}
+                onClick={handleLinkedInClick}
                 >
                 LinkedIn
                 </a>
                 <a
                 href="mailto:bharath.subramanyam.v1@gmail.com"
                 className="text-blue-500 hover:underline bordered-letter"
+                onMouseEnter={handleEmailHover}
+                onClick={handleEmailClick}
                 >
                 Email
                 </a>

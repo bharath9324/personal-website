@@ -1,12 +1,10 @@
 package com.base
 
-import io.github.cdimascio.dotenv.dotenv
+import com.base.DonEnvUtils.dotenv
 import org.hibernate.SessionFactory
 import org.hibernate.cfg.Configuration
 
 object HibernateUtil {
-    private val dotenv = dotenv { directory = System.getProperty("user.home") }
-
     val sessionFactory: SessionFactory  = Configuration()
         .setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver")
         .setProperty("hibernate.connection.url", dotenv["DB_URL"])

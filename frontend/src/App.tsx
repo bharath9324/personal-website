@@ -12,17 +12,18 @@ import iitIndoreLogo from './assets/iit-indore-logo.jpg';
 import ImageChangegBox from './ImageChangeBox';
 import LogoHeading from './LogoHeading';
 import Footer from "./Footer";
+import { EventType, submitEventData } from './apis/eventApi';
 
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
+    submitEventData(EventType.OPEN_PAGE);
     // Simulate loading delay (e.g., fetching assets)
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000); // 1 seconds
-
+    
     return () => clearTimeout(timer);
   }, []);
 

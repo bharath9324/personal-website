@@ -14,6 +14,7 @@ class DbEvent {
     @Column
     private lateinit var ipAddress: String
 
+    @Enumerated(EnumType.STRING)
     @Column
     private lateinit var eventType: EventType
 
